@@ -13,7 +13,7 @@ struct Process
 // Function to sort the Process acc. to priority 
 bool comparison(Process a, Process b) 
 { 
-	return (a.priority > b.priority); 
+	return (a.priority < b.priority); 
 } 
 
 // Function to find the waiting time for all 
@@ -86,7 +86,7 @@ void priorityScheduling(Process proc[], int n)
 // Driver code 
 int main() 
 { 
-	Process proc[] = {{1, 10, 2}, {2, 5, 0}, {3, 8, 1}}; 
+	Process proc[] = {{1, 10, 3}, {2, 1, 1}, {3, 2, 4}, {4, 1, 5}, {5, 5, 2}}; 
 	int n = sizeof proc / sizeof proc[0]; 
 	priorityScheduling(proc, n); 
 	return 0; 
